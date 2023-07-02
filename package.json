@@ -1,0 +1,19 @@
+{
+  "name": "screen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "io": "^1.4.1",
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.6.2",
+    "websocket": "^1.0.34",
+    "ws": "^8.13.0"
+  }
+}

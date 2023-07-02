@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>reciver</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="body2">
+
+    <img src="https://i.ibb.co/C0wtvzR/wb1.jpg" alt="wb1" border="0" class="logo">
+    <div class="div-body2">
+        <input type="text" id="username-input2" placeholder="Enter the number of the person you want to join">
+
+        <button onclick="joinCall()" id="join">Join Call</button>
+        <button id="contact" onclick="contact()">Contact</button>
+
+
+    </div>
+    <div id="video-call-div">
+        <video muted id="local-video" autoplay></video>
+        <video id="remote-video" autoplay></video>
+        <div class="call-action-div">
+            <button onclick="muteVideo()"  id="muteV">Mute Video</button>
+            <button onclick="muteAudio()"  id="muteA">Mute Audio</button>
+            <button onclick="leaveMeeting()" id="leave-meeting-button">Leave Meeting</button>
+           
+        </div>
+    </div>
+
+
+<div id="contact-body">
+   <h1 id="head-contact">Contact</h1>
+    <img src="https://icon-library.com/images/5631de589c.png" id="plus" onclick="nameplate()">
+    <div id="innerhtml-body"></div>
+    <!-- <div id="list"></div>
+    <button id="delete" onclick="delet()">delete</button> -->
+    <!-- <button id="call" onclick="call()">call</button> -->
+    <!-- <div id="number-seen-div"></div> -->
+    
+    <div id="name-contact">
+        <img id="cross" src="https://cdn.icon-icons.com/icons2/2406/PNG/512/times_error_fail_failure_failed_cross_icon_145926.png" onclick="cancelContact()">
+        <input type="text" placeholder="enter the name..." id="save-name">
+        <input type="text" placeholder="enter the number..." id="save-number">
+        <button onclick="addname()" id="button-save-name" >save</button>
+    </div>
+</div>
+
+<script src="reciver.js"></script>
+</body>
+
+</html>

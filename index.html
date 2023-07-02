@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Webcall</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 42px;
+            font-weight: bold;
+            text-shadow: 2px 2px #ddd;
+            letter-spacing: -1px;
+
+        }
+
+        .heading span {
+            display: inline-block;
+            animation: animate 1s linear forwards;
+            opacity: 0;
+            margin: 0.5px;
+            color: #482abd;
+
+        }
+
+
+        @keyframes animate {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #button {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            width: 29vw;
+            position: relative;
+            top: 11rem;
+            left: 0rem;
+            border: none;
+            font-family: 'Poppins';
+        }
+
+        #button2 {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: -148px;
+            padding: 10px 20px;
+            background-color: #99ffb2;
+            color: rgb(0, 66, 153);
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            width: 29vw;
+            margin-top: 87px;
+            border: none;
+            font-family: 'Poppins';
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #button:hover {
+            background-color: #3367d6;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        #button2:hover {
+            background-color: #82ff86;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            height: auto;
+            width: 75vw;
+            border-radius: 20px 20px 0px 0px;
+            box-shadow: #000;
+            background: white;
+            position: relative;
+            top: 7rem;
+            padding: 18px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            z-index: 0;
+            padding-bottom: 451px;
+        }
+
+        .text {
+            margin-bottom: 13px;
+            line-height: 1.5;
+            font-size: 17px;
+            text-align: center;
+            width: auto;
+            position: relative;
+            left: 0rem;
+            letter-spacing: 1px;
+        }
+
+
+
+        .text2 {
+            margin-bottom: 13px;
+            line-height: 1.5;
+            font-size: 18px;
+            text-align: center;
+            position: relative;
+            top: 2rem;
+            left: -1rem;
+            width: auto;
+        }
+
+        .text a {
+            color: #4285f4;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .text a:hover {
+            color: #3367d6;
+        }
+
+        .image {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+
+
+        .image img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            background-color: #d5d5d5;
+            color: #000;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 50px;
+            position: relative;
+            left: 48rem;
+            bottom: -190px;
+            width: 22rem;
+            height: 6rem;
+            right: 0;
+            border-radius: 15px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .button-secondary {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #e67e22;
+            border: none;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+
+        .button:hover {
+            background-color: #3367d6;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+
+        .button-secondary:hover {
+            background-color: #d35400;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+
+        .footer li {
+            margin-bottom: 20px;
+            list-style: none;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            position: relative;
+            top: 5rem;
+            left: 50rem;
+        }
+
+        .footer p {
+            font-family: "Poppins", sans-serif;
+            text-align: justify;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icons li a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .logo {
+            height: 122px;
+            z-index: 2;
+            position: absolute;
+            left: -17px;
+            top: -18px;
+        }
+
+
+
+
+        .button {
+            font-size: 16px;
+        }
+
+        .button-secondary {
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+        }
+
+
+
+
+
+
+        #comm {
+            height: 23rem;
+            position: absolute;
+            left: 71vw;
+            top: 38rem;
+            left: 71vw;
+            top: 37rem;
+        }
+
+        #main-para {
+            width: 100vw;
+            background-color: #282828;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            position: relative;
+            left: -14px;
+            top: -120px;
+            height: auto;
+            padding: 39px;
+            right: 0;
+            letter-spacing: 2px
+        }
+
+        #side-img {
+            height: 120px;
+        }
+
+        #browser {
+            height: 5rem;
+            position: relative;
+            bottom: 2rem;
+            left: 3vw;
+            top: auto;
+        }
+
+        .instr p {
+
+            font-family: "Poppins", sans-serif;
+            color: black;
+            position: relative;
+            letter-spacing: 1px;
+            left: 3rem;
+            top: 0rem;
+
+        }
+
+        .instr p span {
+            color: #ff2424;
+
+        }
+
+        .logo2 {
+            height: 172px;
+            position: absolute;
+            top: 13rem;
+            left: 6vw;
+            z-index: 2;
+        }
+
+        #disclaimer {
+            font-family: "Poppins", sans-serif;
+            z-index: 1;
+            top: -120px;
+            width: 37vw;
+            left: 29vw;
+            text-align: justify;
+            height: auto;
+            position: relative;
+            width: 1;
+            width: 41vw;
+
+        }
+
+        #disclaimer a {
+            color: #4285f4;
+        }
+
+        .icons {
+            height: 2.6rem;
+        }
+
+        .box {
+            margin: auto;
+        }
+
+        #white-webcall {
+            height: 250px;
+            margin-left: 2rem;
+        }
+
+        .box ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: -5rem;
+            gap: 24px;
+        }
+
+        .box ul li {
+            list-style: none;
+            color: white;
+            text-align: center;
+        }
+
+        @media only screen and (max-width:2161px) {
+            #comm {
+                height: 31rem;
+                position: absolute;
+                left: 71vw;
+                top: 29rem;
+                left: 69vw;
+                top: 28rem;
+            }
+
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -144px;
+                width: 37vw;
+                left: 31vw;
+                text-align: justify;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 37vw;
+            }
+
+            #main-para {
+                width: 104vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -9px;
+                top: -140px;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+            }
+
+            .instr p {
+                font-family: "Poppins", sans-serif;
+                color: black;
+                position: relative;
+                letter-spacing: 1px;
+                left: 3rem;
+                top: 0rem;
+                width: 96vw;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                height: auto;
+                width: 75vw;
+                border-radius: 20px 20px 0px 0px;
+                box-shadow: #000;
+                background: white;
+                position: relative;
+                top: 8rem;
+                padding: 18px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                z-index: 0;
+                padding-bottom: 451px;
+            }
+        }
+
+        @media only screen and (max-width:2000px) {
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -176px;
+                width: 37vw;
+                left: 29vw;
+                text-align: justify;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 41vw;
+            }
+
+            #comm {
+                height: 26rem;
+                position: absolute;
+                left: 71vw;
+                top: 38rem;
+                left: 71vw;
+                top: 33rem
+            }
+
+            #main-para {
+                width: 100vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -14px;
+                top: -176px;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+                z-index: 1;
+            }
+
+            #browser {
+                height: 5rem;
+                position: relative;
+                bottom: 10rem;
+                left: 3vw;
+                top: auto;
+            }
+
+            .instr p {
+                font-family: "Poppins", sans-serif;
+                color: black;
+                position: relative;
+                letter-spacing: 1px;
+                left: 3rem;
+                top: -10rem;
+            }
+        }
+
+        @media only screen and (max-width:1865px) {
+            #comm {
+                height: 25rem;
+                position: absolute;
+                left: 71vw;
+                top: 38rem;
+                left: 71vw;
+                top: 36rem;
+            }
+        }
+
+        @media only screen and (max-width:1775px) {
+            #comm {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width:1485px) {
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -262px;
+                width: 37vw;
+                left: 29vw;
+                text-align: justify;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 41vw
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                height: auto;
+                width: 78vw;
+                border-radius: 20px 20px 0px 0px;
+                box-shadow: #000;
+                background: white;
+                position: relative;
+                top: 7rem;
+                padding: 18px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                z-index: 1;
+                padding-bottom: 542px;
+            }
+
+            #main-para {
+                width: 100vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -14px;
+                top: -256px;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+                z-index: 1;
+            }
+
+            #browser {
+                height: 5rem;
+                position: relative;
+                bottom: 13rem;
+                left: 3vw;
+                top: auto;
+            }
+
+            .instr p {
+                font-family: "Poppins", sans-serif;
+                color: black;
+                position: relative;
+                letter-spacing: 1px;
+                left: 3rem;
+                top: -12rem;
+            }
+        }
+
+        @media only screen and (max-width:1485px) {
+            .logo2 {
+                height: 172px;
+                position: absolute;
+                top: 13rem;
+                left: 1vw;
+                z-index: 2;
+            }
+        }
+
+        @media only screen and (max-width:1200px) {
+            #comm {
+                display: none;
+            }
+
+            .logo2 {
+                height: 172px;
+                position: absolute;
+                top: 1rem;
+                left: 68vw;
+                z-index: 2;
+            }
+
+            .text2 {
+                margin-bottom: 13px;
+                line-height: 1.5;
+                font-size: 18px;
+                text-align: center;
+                position: relative;
+                top: 2rem;
+                left: 0rem;
+                width: auto;
+            }
+
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -414px;
+                width: 37vw;
+                left: 24vw;
+                text-align: center;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 51vw;
+                margin-top: 29px;
+            }
+
+            #main-para {
+                width: 100vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -14px;
+                top: -368px;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+                z-index: 1;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                height: auto;
+                width: 75vw;
+                border-radius: 20px 20px 0px 0px;
+                box-shadow: #000;
+                background: white;
+                position: relative;
+                top: 7rem;
+                padding: 18px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                z-index: 1;
+                padding-bottom: 678px;
+            }
+
+            .instr p {
+                font-family: "Poppins", sans-serif;
+                color: black;
+                position: relative;
+                letter-spacing: 1px;
+                left: 3rem;
+                top: -18rem;
+            }
+
+            #browser {
+                height: 5rem;
+                position: relative;
+                bottom: 20rem;
+                left: 3vw;
+                top: auto;
+            }
+
+            .footer {
+                background-color: #d5d5d5;
+                color: #000;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                margin-top: 50px;
+                position: relative;
+                left: 48rem;
+                bottom: -190px;
+                width: 22rem;
+                height: 6rem;
+                right: 0;
+                border-radius: 15px;
+            }
+        }
+
+        @media only screen and (max-width:992px) {
+            .button2 {
+                margin-top: 56px;
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -414px;
+                width: 37vw;
+                left: 20vw;
+                text-align: center;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 59vw;
+                margin-top: 29px;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                height: auto;
+                width: 75vw;
+                border-radius: 20px 20px 0px 0px;
+                box-shadow: #000;
+                background: white;
+                position: relative;
+                top: 7rem;
+                padding: 18px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                z-index: 0;
+                padding-bottom: 850px;
+            }
+
+            #main-para {
+                width: 100vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -14px;
+                top: -562px;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+                z-index: 1;
+            }
+
+            #browser {
+                height: 5rem;
+                position: relative;
+                bottom: 32rem;
+                left: 7vw;
+                top: auto;
+            }
+
+            .instr p {
+                font-family: "Poppins", sans-serif;
+                color: black;
+                position: relative;
+                letter-spacing: 1px;
+                left: 3rem;
+                top: -32rem;
+            }
+
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -576px;
+                width: 37vw;
+                left: 20vw;
+                text-align: center;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 59vw;
+                margin-top: 29px;
+            }
+        }
+
+        @media only screen and (max-width:435px) {
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                height: auto;
+                width: 75vw;
+                border-radius: 20px 20px 0px 0px;
+                box-shadow: #000;
+                background: white;
+                position: relative;
+                top: 7rem;
+                padding: 18px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                z-index: 1;
+                padding-bottom: 994px;
+            }
+
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -722px;
+                width: 37vw;
+                left: 20vw;
+                text-align: center;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 59vw;
+                margin-top: 29px;
+            }
+
+            #main-para {
+                width: 100vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -14px;
+                top: -714px;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+                z-index: 1;
+            }
+
+            #browser {
+                height: 5rem;
+                position: relative;
+                bottom: 42rem;
+                left: 7vw;
+                top: auto;
+            }
+
+            .instr p {
+                font-family: "Poppins", sans-serif;
+                color: black;
+                position: relative;
+                letter-spacing: 1px;
+                left: 3rem;
+                top: -42rem;
+            }
+
+            .footer {
+                background-color: #d5d5d5;
+                color: #000;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                margin-top: 50px;
+                position: relative;
+                left: 48rem;
+                bottom: -190px;
+                width: 22rem;
+                height: 6rem;
+                right: 0;
+                border-radius: 15px;
+            }
+        }
+
+        @media only screen and (max-width:365px) {
+            #disclaimer {
+                font-family: "Poppins", sans-serif;
+                z-index: 1;
+                top: -124rem;
+                width: 37vw;
+                left: 20vw;
+                text-align: center;
+                height: auto;
+                position: relative;
+                width: 1;
+                width: 59vw;
+                margin-top: 29px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                height: auto;
+                width: 75vw;
+                border-radius: 20px 20px 0px 0px;
+                box-shadow: #000;
+                background: white;
+                position: relative;
+                top: 7rem;
+                padding: 18px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                z-index: 1;
+                padding-bottom: 140rem;
+            }
+
+            #main-para {
+                width: 100vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -14px;
+                top: -122rem;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+                z-index: 1;
+            }
+
+            #browser {
+                height: 5rem;
+                position: relative;
+                bottom: 121rem;
+                left: 16vw;
+                top: auto;
+            }
+
+            .instr p {
+                font-family: "Poppins", sans-serif;
+                color: black;
+                position: relative;
+                letter-spacing: 1px;
+                left: 3rem;
+                top: -121rem;
+            }
+
+            .footer {
+                background-color: #d5d5d5;
+                color: #000;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                margin-top: 50px;
+                position: relative;
+                left: 48rem;
+                bottom: -190px;
+                width: 22rem;
+                height: 6rem;
+                right: 0;
+                border-radius: 15px;
+            }
+        }
+
+        @media only screen and (max-width:225px) {
+            #main-para {
+                width: 100vw;
+                background-color: #282828;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                left: -14px;
+                top: -124rem;
+                height: auto;
+                padding: 39px;
+                right: 0;
+                letter-spacing: 2px;
+                z-index: 1;
+            }
+
+            .footer {
+                background-color: #d5d5d5;
+                color: #000;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                margin-top: 50px;
+                position: relative;
+                left: 48rem;
+                bottom: -190px;
+                width: 22rem;
+                height: 6rem;
+                right: 0;
+                border-radius: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://resumegenius.com/wp-content/uploads/communication-skills-resume-hero.png" id="comm">
+    <img src="https://i.ibb.co/y0rVzFZ/webcall.jpg" alt="webcall" class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/3437/3437297.png" alt="webcall" class="logo2">
+
+    <div class="container">
+        <h1 class="heading">
+            <span>World's</span>
+            <span>Fastest</span>
+            <span>Screen</span>
+            <span>Call</span>
+            <span>Platform</span>
+        </h1>
+        <p class="text">Screen sharing is an incredibly useful technology that allows people to work together in
+            real-time,
+            no matter where they are located. With our fast and reliable platform, you can share your screen with anyone
+            in the world, making collaboration easier than ever before.</p>
+        <p class="text2">Get started now by either creating a room or joining an existing one.</p>
+
+        <a href="sender.html"><button id="button2">Create a Room</button></a>
+        <a href="reciver.html"><button id="button">Join a Room</button></a>
+        
+
+    </div>
+    <p id="disclaimer">If you're experiencing issues with screen capture on Chrome for Android, don't worry! There's a
+        simple solution. First, if screen capture is already working for you, you can skip these steps. However, if
+        you're having trouble, <a>you'll need to uninstall the Chrome app from the Google Play Store</a>.> Once you've
+        uninstalled Chrome, download version 88.0.4324.181 from this link:
+        <a href="https://apkcombo.com/chrome/com.android.chrome/old-versions/88.0.4324.181/">Download</a>. After
+        installing the older version
+        of Chrome, open the browser and type in <a>chrome://flags</a> in the address bar. This will bring up the Chrome
+        Flag
+        page. From there, <a>enable the Screen Capture API by selecting 'Enabled' from the dropdown menu</a>. After
+        completing
+        these steps, you should be able to use our website's screen capture feature with ease!
+    </p>
+   
+
+
+    <div id="main-para">Webcall is a website that offers a screen calling feature, allowing users to make video calls
+        and screen share with others directly from their web browser. The platform is designed to make communication and
+        collaboration easy and convenient, without requiring users to download any additional software.
+
+        The screen calling feature on Webcall works by allowing users to create a unique call link that they can share
+        with others. When the other person clicks on the link, they will be taken directly to the call page where they
+        can join the call and start screen sharing. The platform is compatible with all major web browsers, including
+        Chrome, Firefox, Safari, and Edge, and works on both desktop and mobile devices.
+
+        One of the main benefits of using Webcall's screen calling feature is its ease of use. Since there is no
+        software to download, users can start using the platform right away without having to go through a complicated
+        setup process. Additionally, the platform is very intuitive and user-friendly, with a clean and simple interface
+        that makes it easy for users to navigate and find the features they need.
+
+        Another advantage of using Webcall's screen calling feature is its versatility. Users can use the platform for a
+        variety of purposes, including remote work, online tutoring, customer support, and more. The screen sharing
+        feature allows users to collaborate on projects, provide visual demonstrations, and troubleshoot technical
+        issues, all in real-time.
+
+        Webcall's screen calling feature also offers a high level of security and privacy. All calls are encrypted using
+        advanced security protocols, which ensures that sensitive information remains private and secure. Additionally,
+        users have the option to set up password-protected calls and restrict access to specific participants, further
+        enhancing the security of the platform.
+
+        In conclusion, Webcall's screen calling feature is a convenient and user-friendly platform for video calls and
+        screen sharing. With its intuitive interface, versatile functionality, and high level of security, Webcall is an
+        excellent tool for anyone looking to communicate and collaborate remotely.</div>
+
+    <div class="instr">
+        <img id="browser"
+            src="data:image/png;base64,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">
+        <p>Updating your web browser is generally a good idea because it can provide a number of benefits. Here are some
+            problems that you may experience if you don't update your browser regularly:<br><br><br>
+
+            <span>Security vulnerabilities:</span> One of the most important reasons to keep your browser up-to-date is
+            to ensure
+            that it is secure. Older versions of browsers may have security vulnerabilities that can be exploited by
+            attackers to gain access to your device or personal information. Updates to your browser often include
+            security patches and other improvements to protect you from these kinds of threats.<br><br><br><br>
+
+            <span>Compatibility issues:</span> Over time, web developers may use new technologies or standards that
+            aren't supported
+            by older browsers. This can lead to compatibility issues, such as problems with displaying or interacting
+            with certain websites. By keeping your browser up-to-date, you can ensure that you have the latest
+            technology and can access all of the features and functionality of modern websites.<br><br><br><br>
+
+            <span>Performance issues:</span> Older browsers may run more slowly or experience more crashes or errors
+            than newer
+            versions. Updating your browser can help improve its performance and stability, making your browsing
+            experience smoother and more reliable.<br><br><br><br>
+
+            <span> Missing features:</span> As web technology evolves, new features and capabilities become available
+            that can enhance
+            your browsing experience. By updating your browser, you can take advantage of these new features and make
+            the most of your time online.<br><br><br><br>
+
+            To update your browser, simply go to the browser's settings or options menu and look for an option to update
+            or check for updates. This may vary slightly depending on the browser you are using, but it should be easy
+            to find. Once you click on this option, the browser will check for any available updates and will guide you
+            through the installation process if any updates are found.<br><br><br>
+
+            <span>We removed the group call feature from our platform to ensure the highest level of privacy and
+                security for our users. We understand that group calls can be a convenient way to communicate with
+                multiple people at once, but we believe that individual private conversations provide the best level of
+                security and confidentiality. We also found that the group call feature was vulnerable to anyone joining
+                simply by entering a phone number. By removing this feature, we can guarantee that your conversations
+                remain completely private and secure. We apologize for any inconvenience this may cause, and we are
+                committed to making improvements to our platform. In the future, we plan to introduce advanced features
+                that will allow for group calls while maintaining the highest level of security and privacy for our
+                users.</span>
+        </p>
+    </div>
+
+    <footer>
+        <div class="box">
+            <center><img src="https://i.ibb.co/PxKWK3L/webcall-white.jpg" alt="webcall-white" id="white-webcall">
+            </center>
+            <ul>
+                <li><a href="https://youtube.com/@codingwithsamrat137"><img
+                            src="https://cdn-icons-png.flaticon.com/512/152/152810.png" class="icons"></a></li>
+                <li> <a href="https://www.facebook.com/profile.php?id=100092265663248"><img
+                            src="https://cdn-icons-png.flaticon.com/512/59/59439.png" class="icons"></a></li>
+                <li><a href="https://instagram.com/webcall6?igshid=ZDdkNTZiNTM="><img
+                            src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-icon-download-icons-12.png"
+                            class="icons"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+
+<!-- <footer>
+
+    <div class="footer">
+
+        <h1>Webcall</h1>
+        <p>Screen sharing is a powerful tool that allows individuals to share their computer screens with
+            others.</p>
+        <p>This technology is becoming increasingly popular for both personal and professional use,</p>
+        <p>as it can greatly improve collaboration and communication</p>
+    </div>
+    <div class="social-icons">
+        <a href="https://youtube.com/@codingwithsamrat137"><img src="https://cdn-icons-png.flaticon.com/512/152/152810.png" class="icons"></a>
+       <a href="https://www.facebook.com/profile.php?id=100092265663248"><img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" class="icons"></a>
+    <a href="https://instagram.com/webcall6?igshid=ZDdkNTZiNTM="><img src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-icon-download-icons-12.png" class="icons"></a>
+
+
+    </div>
+
+</footer>--->
+
+<script>
+    const heading = document.querySelector('.heading');
+    const words = heading.textContent.split(' ');
+
+    heading.textContent = '';
+
+    words.forEach((word, index) => {
+        const span = document.createElement('span');
+        span.textContent = word + ' ';
+        span.style.animationDelay = `${index / 20}s`;
+        heading.appendChild(span);
+    });
+</script>
+
+</html>

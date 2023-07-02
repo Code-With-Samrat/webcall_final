@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sender</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="body1">
+
+    <img src="https://i.ibb.co/KW3V8T2/wb2.jpg" alt="wb2" border="0" class='logo'>
+    <div class="div-body">
+        <input type="text" id="username-input" placeholder="Enter Your Number">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u56QflcjiU-4EvxXsl8Pl9Rf7HkXhLhwnw&usqp=CAU" id="icon" onclick="sendUsername()">
+        <button onclick="startCall()" id="start">Start A Call</button>
+
+
+    </div>
+    <div id="video-call-div">
+        <video muted id="local-video" autoplay ></video>
+        <h1 id="wait-text">Please wait to join the other person</h1>
+        <video id="remote-video" autoplay></video>
+        <div class="call-action-div">
+            <button onclick="muteVideo()" id="muteV">Mute Video</button>
+            <button onclick="muteAudio()" id="muteA">Mute Audio</button>
+            <button onclick="leaveMeeting()" id="leave-meeting-button">Leave Meeting</button>
+           
+
+        </div>
+    </div>
+    <script src="sender.js"></script>
+</body>
+
+</html>
