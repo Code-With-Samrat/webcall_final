@@ -1,24 +1,24 @@
+const ws = require("ws")
+const https = require("https")
 
-const Socket = require("websocket").server
-const http = require("http")
-
-const server = http.createServer((req, res) => {})
+const server = https.createServer({
+    key: fs.readFileSync("cert.key"),
+    cert: fs.readFileSync("cert.crt")
+})
 
 server.listen(443, () => {
   console.log("Listening on port 443...")
 })
 
-const webSocket = new Socket({ httpServer: server })
-
 let users = []
 
-webSocket.on('request', (req) => {
-    const connection = req.accept()
+ws.on("connection", (ws) => {
+    const connection = ws
 
-    connection.on('message', (message) => {
+    connection.on("message", (message) => {
         const data = JSON.parse(message.utf8Data)
 
-        const user = findUser(data.username)
+        const user = findUserSync(data.username)
 
         switch(data.type) {
             case "store_user":
@@ -91,7 +91,7 @@ webSocket.on('request', (req) => {
         }
     })
 
-    connection.on('close', (reason, description) => {
+    connection.on("close", (reason, description) => {
         users.forEach(user => {
             if (user.conn == connection) {
                 users.splice(users.indexOf(user), 1)
@@ -101,16 +101,17 @@ webSocket.on('request', (req) => {
     })
 })
 
-function sendData(data,conn) {
+function sendData(data, ws) {
 
-   conn.send(JSON.stringify(data));
+   ws.send(JSON.stringify(data));
         
 
 }
 
-function findUser(username) {
+function findUserSync(username) {
     for (let i = 0;i < users.length;i++) {
         if (users[i].username == username)
             return users[i]
     }
+    return null
 }
