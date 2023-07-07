@@ -1,4 +1,4 @@
-const Socket = new WebSocket("wss://192.168.1.3:3000")
+const Socket = new WebSocket("wss://webcall.onrender.com:443")
 
 // Handle WebSocket connection events
 Socket.addEventListener("open", event => {
